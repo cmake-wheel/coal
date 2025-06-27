@@ -19,7 +19,7 @@ dependencies = [
 description = "An extension of the Flexible Collision Library"
 license = "BSD-3-Clause"
 name = "coal-cpp"
-version = "3.0.1"
+version = "3.0.1.90"
 
 [project.urls]
 changelog = "https://github.com/coal-library/coal/blob/master/CHANGELOG.md"
@@ -33,6 +33,7 @@ configure-args = [
   "-DBUILD_PYTHON_INTERFACE=OFF",
 ]
 has-sitelib = false
+upstream-version = "3.0.1"
 
 [tool.tomlsort]
 all = true
