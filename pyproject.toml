@@ -31,7 +31,7 @@ homepage = "https://github.com/cmake-wheel/coal"
 upstream = "https://github.com/coal-library/coal"
 
 [tool.cmeel]
-build-number = 1
+build-number = 2
 configure-args = [
   "-DCOAL_HAS_QHULL=ON",
   "-DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL=ON",
