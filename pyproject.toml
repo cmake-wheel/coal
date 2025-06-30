@@ -7,6 +7,8 @@ requires = [
   "cmeel-qhull >= 8.0.2.1, < 8.0.3",
   "cmeel[build]",
   "cmeel-eigen",
+  "coal-cpp == 3.0.1.90",
+  "eigenpy[build] >= 3.10, < 4"
 ]
 
 [project]
@@ -15,10 +17,12 @@ dependencies = [
   "cmeel-boost ~= 1.87.0",
   "cmeel-octomap >= 1.9.8.2, < 2",
   "cmeel-qhull >= 8.0.2.1, < 8.0.3",
+  "coal-cpp == 3.0.1.90",
+  "eigenpy[build] >= 3.10, < 4"
 ]
 description = "An extension of the Flexible Collision Library"
 license = "BSD-3-Clause"
-name = "coal-cpp"
+name = "coal"
 version = "3.0.1.90"
 
 [project.urls]
@@ -30,7 +34,8 @@ upstream = "https://github.com/coal-library/coal"
 configure-args = [
   "-DCOAL_HAS_QHULL=ON",
   "-DCOAL_BACKWARD_COMPATIBILITY_WITH_HPP_FCL=ON",
-  "-DBUILD_PYTHON_INTERFACE=OFF",
+  "-DBUILD_PYTHON_INTERFACE=ON",
+  "-DBUILD_STANDALONE_PYTHON_INTERFACE=ON",
 ]
 has-sitelib = false
 upstream-version = "3.0.1"
