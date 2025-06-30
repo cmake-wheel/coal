@@ -1,5 +1,5 @@
 # Find Boost.UnitTestFramework
-if(NOT BUILD_ONLY_PYTHON_INTERFACE)
+if(NOT BUILD_STANDALONE_PYTHON_INTERFACE)
   find_package(Boost REQUIRED COMPONENTS unit_test_framework filesystem)
 
   CONFIG_FILES(fcl_resources/config.h)
@@ -40,7 +40,7 @@ if(NOT BUILD_ONLY_PYTHON_INTERFACE)
   add_coal_test(security_margin security_margin.cpp)
   add_coal_test(geometric_shapes geometric_shapes.cpp)
   add_coal_test(shape_inflation shape_inflation.cpp)
-  #add_coal_test(shape_mesh_consistency shape_mesh_consistency.cpp)
+  # add_coal_test(shape_mesh_consistency shape_mesh_consistency.cpp)
   add_coal_test(gjk_asserts gjk_asserts.cpp)
   add_coal_test(frontlist frontlist.cpp)
   set_tests_properties(${PROJECT_NAME}-frontlist PROPERTIES TIMEOUT 7200)
@@ -77,7 +77,7 @@ if(NOT BUILD_ONLY_PYTHON_INTERFACE)
   add_coal_test(broadphase_collision_1 broadphase_collision_1.cpp)
   add_coal_test(broadphase_collision_2 broadphase_collision_2.cpp)
 
-  ## Benchmark
+  # Benchmark
   set(test_benchmark_target ${PROJECT_NAME}-test-benchmark)
   add_executable(${test_benchmark_target} benchmark.cpp)
   set_standard_output_directory(${test_benchmark_target})
@@ -87,7 +87,7 @@ if(NOT BUILD_ONLY_PYTHON_INTERFACE)
   )
 endif()
 
-## Python tests
+# Python tests
 if(BUILD_PYTHON_INTERFACE)
   add_subdirectory(python_unit)
 endif(BUILD_PYTHON_INTERFACE)

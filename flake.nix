@@ -53,7 +53,7 @@
               };
             });
             coal-py = (self'.packages.coal.override { pythonSupport = true; }).overrideAttrs (super: {
-              cmakeFlags = super.cmakeFlags ++ [ "-DBUILD_ONLY_PYTHON_INTERFACE=ON" ];
+              cmakeFlags = super.cmakeFlags ++ [ "-DBUILD_STANDALONE_PYTHON_INTERFACE=ON" ];
               src = pkgs.lib.fileset.toSource {
                 root = ./.;
                 fileset = pkgs.lib.fileset.unions [
